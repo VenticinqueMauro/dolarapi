@@ -27,6 +27,8 @@ export default function App() {
       setPrice({ blue: newPrice / dolarapi.venta, pesos: newPrice });
   }
 
+  
+
   return (
     <>
       {
@@ -35,8 +37,8 @@ export default function App() {
             <h1 className="flex items-center gap-1 p-2 font-semibold border rounded border-slate-300">
               🔥 Dolar Blue: ${dolarapi?.venta}
             </h1>
-            <p>
-              Última Actualización:{" "}
+            <p className="text-sm">
+            Últ. actualización:{" "}
               <b>
                 {dolarapi?.fechaActualizacion
                   ? new Date(dolarapi.fechaActualizacion).toLocaleString("es-ES")
@@ -63,10 +65,10 @@ export default function App() {
             />
             <div className="flex items-center gap-4">
               <span className="flex items-center gap-1 px-2 py-1 text-green-300 rounded bg-green-600/20">
-                USD <b className="text-lg">{price.blue?.toFixed(2) ?? 0}</b>
+                USD <b className="text-lg">{(price.blue ?? 0).toLocaleString('en-US', { minimumFractionDigits: 2 })}</b>
               </span>
               <span className="flex items-center gap-1 px-2 py-1 text-blue-400 rounded bg-blue-400/20">
-                ARG <b className="text-xl">{price.pesos?.toFixed(2) ?? 0}</b>
+                ARG <b className="text-xl">{(price.pesos ?? 0).toLocaleString('es-AR', { minimumFractionDigits: 2 })}</b>
               </span>
             </div>
           </div>
