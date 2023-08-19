@@ -60,15 +60,15 @@ export default function App() {
               type="number"
               name="price-pesos"
               value={price.pesos || ""}
-              placeholder="🇦🇷 Ingrese monto en pesos arg"
+              placeholder="🇦🇷 Ingrese monto en pesos"
               onChange={handleInputPesos}
             />
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 text-sm">
               <span className="flex items-center gap-1 px-2 py-1 text-green-300 rounded bg-green-600/20">
                 USD <b className="text-lg">{(price.blue ?? 0).toLocaleString('en-US', { minimumFractionDigits: 2 })}</b>
               </span>
               <span className="flex items-center gap-1 px-2 py-1 text-blue-400 rounded bg-blue-400/20">
-                ARG <b className="text-xl">{(price.pesos ?? 0).toLocaleString('es-AR', { minimumFractionDigits: 2 })}</b>
+                ARG <b className="text-lg">{(price.pesos ?? 0).toLocaleString('es-AR', { minimumFractionDigits: 2 })}</b>
               </span>
             </div>
           </div>
