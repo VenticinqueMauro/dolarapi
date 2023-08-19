@@ -26,6 +26,7 @@ export function useDolarAPI() {
         };
 
         getDolar();
+
     }, []);
 
     return { dolarapi };
