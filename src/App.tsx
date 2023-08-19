@@ -38,17 +38,17 @@ export default function App() {
             : ""}
         </b>
       </p>
+        <input
+          className="px-2 rounded placeholder:text-green-300 bg-green-300/20"
+          id="price-dollars"
+          type="number"
+          name="price-dollars"
+          value={price.blue || ""}
+          placeholder="Ingrese monto en dólares "
+          onChange={handleInputDollars}
+        />
       <input
-        className="px-2 text-black rounded placeholder:text-zinc-600"
-        id="price-dollars"
-        type="number"
-        name="price-dollars"
-        value={price.blue || ""}
-        placeholder="Ingrese monto en dólares "
-        onChange={handleInputDollars}
-      />
-      <input
-        className="px-2 text-black rounded placeholder:text-zinc-600"
+        className="px-2 rounded placeholder:text-blue-300 bg-blue-300/20"
         id="price-pesos"
         type="number"
         name="price-pesos"
@@ -57,10 +57,10 @@ export default function App() {
         onChange={handleInputPesos}
       />
       <div className="flex items-center gap-4">
-        <span className="flex items-center gap-1 p-2 rounded bg-green-600/90">
+        <span className="flex items-center gap-1 px-2 py-1 text-green-300 rounded bg-green-600/20">
           USD <b className="text-lg">{price.blue?.toFixed(2) ?? 0}</b>
         </span>
-        <span className="flex items-center gap-1 p-2 bg-blue-400 rounded">
+        <span className="flex items-center gap-1 px-2 py-1 text-blue-400 rounded bg-blue-400/20">
           ARG <b className="text-xl">{price.pesos?.toFixed(2) ?? 0}</b>
         </span>
       </div>
