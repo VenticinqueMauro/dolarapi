@@ -44,7 +44,7 @@ export default function App() {
           type="number"
           name="price-dollars"
           value={price.blue || ""}
-          placeholder="Ingrese monto en dólares "
+          placeholder="🇺🇸 Ingrese monto en dólares "
           onChange={handleInputDollars}
         />
       <input
@@ -53,7 +53,7 @@ export default function App() {
         type="number"
         name="price-pesos"
         value={price.pesos || ""}
-        placeholder="Ingrese monto en pesos argentinos"
+        placeholder="🇦🇷 Ingrese monto en pesos arg"
         onChange={handleInputPesos}
       />
       <div className="flex items-center gap-4">
